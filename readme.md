@@ -1,6 +1,6 @@
 ### SENTIMENT ANALYSIS ON DJANGO APP
 
-- I worn you, all steps of the project is for adding movie comments to emojis like 🙂 and 😤 (as sentiments).
+- I warn you, all steps of the project is for adding movie comments to emojis like 🙂 and 😤 (as sentiments).
 
 I made this project in a day (as weekend project) to warm up with Django more and use a Bert Model / Transformers on it. 
 
