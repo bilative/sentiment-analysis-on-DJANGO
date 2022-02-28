@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<h3>Movies</h3>
+
+
+{% load crispy_forms_tags %}
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3>Movies</h3>
+        <hr>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form|crispy}}
+            <br>
+            <button type="submit" name="search" class="btn btn-info">Search Movie</button>
+        </form>
+    </div>
+</div> 
+
+    <hr>
+
+    <div class="row">
+        {% for cont in data %}
+        {% if forloop.counter|divisibleby:"7" %}
+        </div>
+        <hr>
+        <div class="row">
+        {% else %}
+        <div class="col-md-2">
+            <h4>{{cont.movie}}</h4>
+            <a href="/movies/{{cont.movie}}"><img src="{{cont.header_urls}}" class="img-thumbnail"></a>
+        </div>
+        
+        {% endif %}
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

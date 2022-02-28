@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-12">
+        <article>
+            {% for movie in data1 %}
+            
+            <header class="mb-8" style="text-align:center">
+                
+                <h1 class="fw-bolder mb-1">{{movie.movie}}</h1>
+                
+                <div class="text-muted fst-italic mb-2">Total Number of the commnets: {{data0}}</b> </div>
+            </header>
+            
+            <figure class="mb-8" style="text-align:center"><img class="img-fluid rounded" src="{{movie.header_urls}}"
+                alt="..." /></figure>
+            
+                {% endfor %}
+
+                <hr>
+                {% for movie in data2 %}
+                    <br>
+                    {% if movie.sentiment == "positive" %}
+                    <li>🙂 {{movie.comment}}</li>
+                    {% else %}
+                    <li>😤 {{movie.comment}}</li>
+                    {% endif %}
+                    
+                {% endfor %}
+
+        
+        </article>
+    </div>
+</div>
+
+
+{% endblock %}
