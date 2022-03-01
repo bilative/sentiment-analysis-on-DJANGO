@@ -18,6 +18,9 @@ Used concepts in the projects:
 - And lastly I made a simple Django app to show intermediate steps and the interface. [here](https://github.com/bilative/sentiment-analysis-on-DJANGO/tree/main/DJANGO_APP/MovieApp)
 
 -----
+How I planned this project before I started.
+![plan](https://user-images.githubusercontent.com/70684994/156235126-0549c076-65cf-4681-80af-5e7bf2859850.png)
+
 
 Sample screenshots from the app:
 
